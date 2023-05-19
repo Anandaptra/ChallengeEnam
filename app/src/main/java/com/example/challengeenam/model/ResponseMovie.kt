@@ -1,8 +1,11 @@
+@file:Suppress("unused", "unused", "unused")
+
 package com.example.challengeenam.model
 
 
 import com.google.gson.annotations.SerializedName
 
+@Suppress("unused", "unused", "unused")
 data class ResponseMovie(
     @SerializedName("page")
     val page: Int,

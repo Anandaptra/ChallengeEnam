@@ -5,7 +5,8 @@
     android:layout_height="match_parent"
     android:background="@drawable/bg"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".fragment.SpalshFragment">
+    tools:context=".fragment.SpalshFragment"
+    tools:ignore="Overdraw">
 
     <ImageView
         android:id="@+id/imageView2"

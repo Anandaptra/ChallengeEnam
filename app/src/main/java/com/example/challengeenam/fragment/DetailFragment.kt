@@ -1,20 +1,33 @@
+@file:Suppress("unused", "MemberVisibilityCanBePrivate", "MemberVisibilityCanBePrivate",
+    "MemberVisibilityCanBePrivate", "MemberVisibilityCanBePrivate", "MemberVisibilityCanBePrivate",
+    "MemberVisibilityCanBePrivate", "MemberVisibilityCanBePrivate", "MemberVisibilityCanBePrivate",
+    "MemberVisibilityCanBePrivate", "MemberVisibilityCanBePrivate", "MemberVisibilityCanBePrivate",
+    "MemberVisibilityCanBePrivate", "ReplaceGetOrSet", "ReplaceGetOrSet"
+)
+
 package com.example.challengeenam.fragment
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.bumptech.glide.Glide
-import com.example.challengeenam.R
 import com.example.challengeenam.databinding.FragmentDetailBinding
 import com.example.challengeenam.model.Movie
 import com.example.challengeenam.viewmodel.FavoritViewModel
 import com.example.challengeenam.viewmodel.MovieViewModel
 import dagger.hilt.android.AndroidEntryPoint
 
+@Suppress("unused", "unused", "unused", "MemberVisibilityCanBePrivate",
+    "MemberVisibilityCanBePrivate", "MemberVisibilityCanBePrivate", "MemberVisibilityCanBePrivate",
+    "MemberVisibilityCanBePrivate", "MemberVisibilityCanBePrivate", "MemberVisibilityCanBePrivate",
+    "MemberVisibilityCanBePrivate", "MemberVisibilityCanBePrivate", "MemberVisibilityCanBePrivate",
+    "MemberVisibilityCanBePrivate", "MemberVisibilityCanBePrivate", "ReplaceGetOrSet",
+    "ReplaceGetOrSet", "ReplaceGetOrSet", "ReplaceGetOrSet"
+)
 @AndroidEntryPoint
 class DetailFragment : Fragment() {
     private lateinit var binding: FragmentDetailBinding
@@ -24,7 +37,7 @@ class DetailFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         // Inflate the layout for this fragment
         binding = FragmentDetailBinding.inflate(layoutInflater, container, false)
         return binding.root
@@ -53,7 +66,7 @@ class DetailFragment : Fragment() {
 
         binding.imgFav.setOnClickListener {
             favoritViewModel.insertMovie(id, title, date, imagepath)
-            Toast.makeText(context, "Berhasil di tambah", Toast.LENGTH_SHORT).show()
+            Toast.makeText(context, "Add to Favorite Success", Toast.LENGTH_SHORT).show()
         }
 
     }

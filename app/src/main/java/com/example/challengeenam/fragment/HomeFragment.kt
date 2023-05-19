@@ -1,3 +1,5 @@
+@file:Suppress("RedundantSamConstructor", "ReplaceGetOrSet")
+
 package com.example.challengeenam.fragment
 
 import android.content.Context
@@ -21,7 +23,7 @@ import dagger.hilt.android.AndroidEntryPoint
 @AndroidEntryPoint
 class HomeFragment : Fragment() {
     lateinit var binding: FragmentHomeBinding
-    lateinit var shredPref : SharedPreferences
+    private lateinit var shredPref : SharedPreferences
     private lateinit var movieAdapter: MovieAdapter
     private lateinit var movieViewModel : MovieViewModel
     private lateinit var firebaseAuth: FirebaseAuth
@@ -29,7 +31,7 @@ class HomeFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         binding = FragmentHomeBinding.inflate(layoutInflater, container, false)
         // Inflate the layout for this fragment
         return binding.root

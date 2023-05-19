@@ -1,3 +1,5 @@
+@file:Suppress("CanBeVal")
+
 package com.example.challengeenam.fragment
 
 import android.content.Context
@@ -18,13 +20,13 @@ import dagger.hilt.android.AndroidEntryPoint
 class ProfileFragment : Fragment() {
 
     lateinit var binding: FragmentProfileBinding
-    lateinit var sharedpref : SharedPreferences
-    lateinit var firebaseAuth: FirebaseAuth
+    private lateinit var sharedpref : SharedPreferences
+    private lateinit var firebaseAuth: FirebaseAuth
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         // Inflate the layout for this fragment
         binding = FragmentProfileBinding.inflate(layoutInflater,container,false)
         return binding.root
@@ -43,14 +45,14 @@ class ProfileFragment : Fragment() {
             upusername.apply()
             firebaseAuth = FirebaseAuth.getInstance()
             firebaseAuth.signOut()
-            Toast.makeText(context, "Update Data Berhasil", Toast.LENGTH_SHORT).show()
+            Toast.makeText(context, "Success Update Data", Toast.LENGTH_SHORT).show()
             Navigation.findNavController(binding.root).navigate(R.id.action_profileFragment_to_homeFragment)
         }
 
         binding.btnLogout.setOnClickListener {
             firebaseAuth = FirebaseAuth.getInstance()
             firebaseAuth.signOut()
-            Toast.makeText(context, "Berhasil Logout", Toast.LENGTH_SHORT).show()
+            Toast.makeText(context, "Logout Success", Toast.LENGTH_SHORT).show()
             Navigation.findNavController(binding.root).navigate(R.id.action_profileFragment_to_loginFragment)
         }
 

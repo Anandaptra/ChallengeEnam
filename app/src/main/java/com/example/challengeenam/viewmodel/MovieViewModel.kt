@@ -1,3 +1,5 @@
+@file:Suppress("unused", "unused", "unused", "unused")
+
 package com.example.challengeenam.viewmodel
 
 import android.annotation.SuppressLint
@@ -12,12 +14,13 @@ import retrofit2.Response
 import com.example.challengeenam.model.Result
 import javax.inject.Inject
 
+@Suppress("MemberVisibilityCanBePrivate", "JoinDeclarationAndAssignment")
 @HiltViewModel
 class MovieViewModel @Inject constructor(private var api : ResultApi): ViewModel() {
     lateinit var liveDataMovie : MutableLiveData<List<Result>>
-    lateinit var liveDetailMovie : MutableLiveData<ResponseMovie>
+    private lateinit var liveDetailMovie : MutableLiveData<ResponseMovie>
 
-    val key = "a89633b1333a8e0f2bb90016feb3252a"
+    private val key = "a89633b1333a8e0f2bb90016feb3252a"
 
     init {
         liveDataMovie = MutableLiveData()

@@ -1,5 +1,8 @@
+@file:Suppress("unused", "unused", "RemoveEmptyClassBody")
+
 package com.example.challengeenam.adapter
 
+import android.annotation.SuppressLint
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -11,7 +14,8 @@ import com.example.challengeenam.model.Result
 import com.example.challengeenam.databinding.ItemMovieBinding
 import com.example.challengeenam.model.Movie
 
-class MovieAdapter(var listMovie : List<Result>): RecyclerView.Adapter<MovieAdapter.ViewHolder>() {
+@Suppress("unused", "unused", "unused", "CanBeVal", "CanBeVal")
+class MovieAdapter(private var listMovie : List<Result>): RecyclerView.Adapter<MovieAdapter.ViewHolder>() {
 
     class ViewHolder (var binding : ItemMovieBinding): RecyclerView.ViewHolder(binding.root) {
 
@@ -54,6 +58,7 @@ class MovieAdapter(var listMovie : List<Result>): RecyclerView.Adapter<MovieAdap
         return listMovie.size
     }
 
+    @SuppressLint("NotifyDataSetChanged")
     fun setDataMovie(list : List<Result>){
         listMovie = list
         notifyDataSetChanged()

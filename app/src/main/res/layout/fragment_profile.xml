@@ -6,7 +6,8 @@
     android:padding="20dp"
     android:background="@drawable/bg"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".fragment.ProfileFragment">
+    tools:context=".fragment.ProfileFragment"
+    tools:ignore="Overdraw">
 
     <TextView
         android:id="@+id/textView2"

@@ -8,13 +8,13 @@ import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
+@Suppress("unused", "unused", "unused", "unused", "unused", "unused", "unused", "unused", "unused")
 @HiltViewModel
 class FavoritViewModel @Inject constructor(private val favoriteDAO: FavDao): ViewModel( ){
 
-    //insert favorite movie
     suspend fun insertFavoriteMovie( favorite: FavNote) = favoriteDAO.insertFilmFavorites(favorite)
 
-    fun insertMovie(id:Int,title:String,date:String,image:String){
+    fun insertMovie(id : Int,title : String,date : String,image : String){
         viewModelScope.launch {
             val movie = FavNote(id,title,date,image)
             favoriteDAO.insertFilmFavorites(movie)

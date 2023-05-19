@@ -1,3 +1,5 @@
+@file:Suppress("unused")
+
 package com.example.challengeenam.network
 
 import dagger.Module
@@ -8,10 +10,11 @@ import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import javax.inject.Singleton
 
+@Suppress("unused")
 @Module
 @InstallIn(SingletonComponent::class)
 object RetrofitClient {
-    const val BASE_URL2 = "https://api.themoviedb.org/3/"
+    private const val BASE_URL2 = "https://api.themoviedb.org/3/"
 
     val instance: ResultApi by lazy {
         val retrofit = Retrofit.Builder()

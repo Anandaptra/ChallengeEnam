@@ -10,7 +10,6 @@ import kotlinx.parcelize.Parcelize
 @Parcelize
 data class FavNote(
     @PrimaryKey
-//    @ColumnInfo(name = "id")
     val id : Int,
     @ColumnInfo(name = "title")
     var title : String,

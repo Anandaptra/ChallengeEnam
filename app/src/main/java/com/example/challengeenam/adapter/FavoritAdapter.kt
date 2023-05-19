@@ -1,3 +1,11 @@
+@file:Suppress("unused", "unused", "unused", "unused", "unused", "unused", "unused", "unused",
+    "unused", "unused", "unused", "unused", "unused", "unused", "unused", "unused", "unused",
+    "unused", "unused", "unused", "unused", "unused", "unused", "unused", "unused",
+    "RemoveEmptyClassBody", "RemoveEmptyClassBody", "MemberVisibilityCanBePrivate",
+    "MemberVisibilityCanBePrivate", "MemberVisibilityCanBePrivate", "MemberVisibilityCanBePrivate",
+    "CanBeVal", "CanBeVal", "CanBeVal", "CanBeVal", "CanBeVal"
+)
+
 package com.example.challengeenam.adapter
 
 import android.view.LayoutInflater
@@ -7,6 +15,13 @@ import com.bumptech.glide.Glide
 import com.example.challengeenam.databinding.ItemFavoritBinding
 import com.example.challengeenam.room.FavNote
 
+@Suppress("unused", "unused", "unused", "unused", "unused", "unused", "unused", "unused", "unused",
+    "unused", "RemoveRedundantQualifierName", "RemoveEmptyClassBody", "RemoveEmptyClassBody",
+    "RemoveEmptyClassBody", "MemberVisibilityCanBePrivate", "MemberVisibilityCanBePrivate",
+    "MemberVisibilityCanBePrivate", "MemberVisibilityCanBePrivate", "MemberVisibilityCanBePrivate",
+    "MemberVisibilityCanBePrivate", "MemberVisibilityCanBePrivate", "MemberVisibilityCanBePrivate",
+    "MemberVisibilityCanBePrivate", "CanBeVal", "CanBeVal", "CanBeVal", "CanBeVal"
+)
 class FavoritAdapter(var listFav : List<FavNote>): RecyclerView.Adapter<FavoritAdapter.ViewHolder>() {
 
     class ViewHolder ( val binding: ItemFavoritBinding): RecyclerView.ViewHolder(binding.root) {

@@ -1,8 +1,14 @@
+@file:Suppress("unused", "unused", "unused", "unused", "unused", "unused", "unused", "unused",
+    "unused", "unused", "unused", "unused", "unused", "unused", "unused", "unused", "unused",
+    "unused", "unused", "unused", "unused", "unused", "unused", "unused", "unused", "unused"
+)
+
 package com.example.challengeenam.model
 
 
 import com.google.gson.annotations.SerializedName
 
+@Suppress("unused", "unused", "unused")
 data class Result(
     @SerializedName("adult")
     val adult: Boolean,

@@ -18,12 +18,12 @@ import dagger.hilt.android.AndroidEntryPoint
 class RegisFragment : Fragment() {
     lateinit var binding: FragmentRegisBinding
     private lateinit var firebaseAuth: FirebaseAuth
-    lateinit var pref : SharedPreferences
+    private lateinit var pref : SharedPreferences
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         // Inflate the layout for this fragment
         binding = FragmentRegisBinding.inflate(layoutInflater, container, false)
         return binding.root

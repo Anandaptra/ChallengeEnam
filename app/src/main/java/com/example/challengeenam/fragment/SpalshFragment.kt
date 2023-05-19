@@ -17,12 +17,12 @@ import dagger.hilt.android.AndroidEntryPoint
 @AndroidEntryPoint
 class SpalshFragment : Fragment() {
     lateinit var binding: FragmentSpalshBinding
-    lateinit var splash: SharedPreferences
+    private lateinit var splash: SharedPreferences
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         // Inflate the layout for this fragment
         binding = FragmentSpalshBinding.inflate(layoutInflater, container, false)
         Handler(Looper.myLooper()!!).postDelayed({
