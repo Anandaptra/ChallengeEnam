@@ -27,7 +27,6 @@ class ProfileFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        // Inflate the layout for this fragment
         binding = FragmentProfileBinding.inflate(layoutInflater,container,false)
         return binding.root
     }
@@ -35,6 +34,9 @@ class ProfileFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         sharedpref = requireActivity().getSharedPreferences("dataregistrasi", Context.MODE_PRIVATE)
+
+        val getUser = sharedpref.getString("username", "")
+        binding.updateUsername.setText(getUser)
 
 
         binding.btnUpdate.setOnClickListener {
@@ -52,12 +54,11 @@ class ProfileFragment : Fragment() {
         binding.btnLogout.setOnClickListener {
             firebaseAuth = FirebaseAuth.getInstance()
             firebaseAuth.signOut()
+            val addUser = sharedpref.edit()
+            addUser.apply()
             Toast.makeText(context, "Logout Success", Toast.LENGTH_SHORT).show()
             Navigation.findNavController(binding.root).navigate(R.id.action_profileFragment_to_loginFragment)
         }
-
-
-
 
     }
 

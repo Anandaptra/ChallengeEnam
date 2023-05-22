@@ -17,4 +17,6 @@ data class FavNote(
     var tanggal: String,
     @ColumnInfo(name = "poster_path")
     val poster_path:String,
+    @ColumnInfo(name = "overview")
+    var overview: String
     ) : Parcelable
